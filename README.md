@@ -90,3 +90,6 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   README.md
         modified:   app/base/urls.py
         modified:   app/base/views.py
+
+
+## 3. LOGIN / LOGOUT
