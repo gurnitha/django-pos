@@ -40,3 +40,11 @@ Membuat POS sistem menggunakan Django v2.2
         dahulu venv3932.
 
         Testing: hasil bagus :)
+
+
+#### 2.3 Create, Connect db and settings
+
+        modified:   .gitignore
+        modified:   README.md
+        modified:   config_pos/settings.py
+
