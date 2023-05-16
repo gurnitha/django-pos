@@ -72,3 +72,14 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   config_pos/urls.py
         new file:   templates/base.html
         new file:   templates/base/index.html
+
+
+#### 2.6 Template inheritance
+
+        modified:   README.md
+        modified:   templates/base.html
+        modified:   templates/base/index.html
+        new file:   templates/partials/footer.html
+        new file:   templates/partials/head.html
+        new file:   templates/partials/sidebar.html
+        new file:   templates/partials/top_navbar.html

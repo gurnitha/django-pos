@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'partials/head.html' %}
+</head>
+
+<body id="page-top">
+
+    {% include 'partials/sidebar.html' %}
+
+    {% include 'partials/top_navbar.html' %}
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+    {% include 'partials/footer.html' %}
+ 
+</body>
+</html>
