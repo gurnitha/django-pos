@@ -7,6 +7,7 @@ from django.views.generic import TemplateView
 # def home_page(request):
 # 	return render(request, 'base/index.html')
 
-class home_page(LoginRequiredMixin, TemplateView):
+class Home(LoginRequiredMixin, TemplateView):
 	template_name = 'base/index.html'
-	login_url = '/admin'
+	# login_url = '/admin'
+	login_url = 'users:login'

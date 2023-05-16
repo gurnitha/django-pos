@@ -108,5 +108,36 @@ Membuat POS sistem menggunakan Django v2.2
 
         NOTE:
 
-        1. If user not login, user will redirect to admin page
+        1. If user not login, user will redirect to admin page to login
         2. Once user logged in successfully, user can view the home page 
+
+
+### 3.2 Create users app and login/logout
+
+        modified:   README.md
+        modified:   app/base/urls.py
+        modified:   app/base/views.py
+        new file:   app/users/__init__.py
+        new file:   app/users/admin.py
+        new file:   app/users/apps.py
+        new file:   app/users/migrations/__init__.py
+        new file:   app/users/models.py
+        new file:   app/users/tests.py
+        new file:   app/users/urls.py
+        new file:   app/users/views.py
+        modified:   config_pos/settings.py
+        modified:   config_pos/urls.py
+        modified:   templates/partials/footer.html
+        modified:   templates/partials/top_navbar.html
+        new file:   templates/users/login.html
+        new file:   templates/users/logout.html
+
+        NOTE:
+
+        1. Existing user can login via the login page
+        2. After logging in, user redirect to home page
+        3. Home page is now protected
+        4. Logged in user can logout and after logged out,
+           user redirect to login page
+
+        ** To login via login page, user MUST NOT logged in via admin dashboard

@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # new
+    'app.users.apps.UsersConfig',
     'app.base.apps.BaseConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,7 @@ USE_TZ = True
 # SETUP STATIC FILES IN DEVELOPMENT
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+# Redirect
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
