@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.views import generic 
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView 
 
 # Create your views here.
 
 # def home_page(request):
 # 	return render(request, 'base/index.html')
 
-class home_page(generic.TemplateView):
-	template_name = 'base/home.html'
+class home_page(LoginRequiredMixin, TemplateView):
+	template_name = 'base/index.html'
+	login_url = '/admin'

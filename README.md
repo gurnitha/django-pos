@@ -93,3 +93,20 @@ Membuat POS sistem menggunakan Django v2.2
 
 
 ## 3. LOGIN / LOGOUT
+
+
+### 3.1 Use LoginRequiredMixin to required login to view the home page
+
+        class home_page(LoginRequiredMixin, TemplateView):
+                template_name = 'base/index.html'
+                login_url = '/admin'
+
+        path('',views.home_page.as_view(),name="home_page")
+
+        modified:   README.md
+        modified:   app/base/views.py
+
+        NOTE:
+
+        1. If user not login, user will redirect to admin page
+        2. Once user logged in successfully, user can view the home page 
