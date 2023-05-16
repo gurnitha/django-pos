@@ -83,3 +83,10 @@ Membuat POS sistem menggunakan Django v2.2
         new file:   templates/partials/head.html
         new file:   templates/partials/sidebar.html
         new file:   templates/partials/top_navbar.html
+
+
+#### 2.7 Using Built-in class-based generic views
+
+        modified:   README.md
+        modified:   app/base/urls.py
+        modified:   app/base/views.py
