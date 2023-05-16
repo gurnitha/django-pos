@@ -48,3 +48,15 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   README.md
         modified:   config_pos/settings.py
 
+
+#### 2.4 Membuat app dengan nama 'app/base'
+
+        modified:   README.md
+        new file:   app/base/__init__.py
+        new file:   app/base/admin.py
+        new file:   app/base/apps.py
+        new file:   app/base/migrations/__init__.py
+        new file:   app/base/models.py
+        new file:   app/base/tests.py
+        new file:   app/base/views.py
+        modified:   config_pos/settings.py
