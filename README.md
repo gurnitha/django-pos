@@ -60,3 +60,15 @@ Membuat POS sistem menggunakan Django v2.2
         new file:   app/base/tests.py
         new file:   app/base/views.py
         modified:   config_pos/settings.py
+
+
+#### 2.5 Configuring static files
+
+        modified:   .gitignore
+        modified:   README.md
+        new file:   app/base/urls.py
+        modified:   app/base/views.py
+        modified:   config_pos/settings.py
+        modified:   config_pos/urls.py
+        new file:   templates/base.html
+        new file:   templates/base/index.html
