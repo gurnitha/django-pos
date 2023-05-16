@@ -141,3 +141,28 @@ Membuat POS sistem menggunakan Django v2.2
            user redirect to login page
 
         ** To login via login page, user MUST NOT logged in via admin dashboard
+
+
+### 3.3 Adding Alert message
+
+        modified:   README.md
+        modified:   templates/users/login.html
+
+        <small class="text-danger">
+            {% if form.errors %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            {{ error |escape }}
+                        {% endfor %}
+                    {% endif %}    
+                {% endfor %}
+
+                {% if form.non_field_errors %}
+                    {% for error in form.non_field_errors %}
+                        {{ error|escape }}
+                    {% endfor %}
+                {% endif %}
+
+            {% endif %}
+        </small>
