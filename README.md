@@ -169,3 +169,15 @@ Membuat POS sistem menggunakan Django v2.2
 
 
 ## 4. KATALOG
+
+
+#### 4.1 Membuat app dengan nama 'app\inventory'
+
+        modified:   README.md
+        new file:   app/inventory/__init__.py
+        new file:   app/inventory/admin.py
+        new file:   app/inventory/apps.py
+        new file:   app/inventory/migrations/__init__.py
+        new file:   app/inventory/models.py
+        new file:   app/inventory/tests.py
+        new file:   app/inventory/views.py
