@@ -135,7 +135,9 @@ USE_TZ = True
 
 # SETUP STATIC FILES IN DEVELOPMENT
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Redirect
 LOGIN_REDIRECT_URL = '/'

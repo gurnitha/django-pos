@@ -210,3 +210,10 @@ Membuat POS sistem menggunakan Django v2.2
         new file:   app/inventory/urls.py
         modified:   config_pos/urls.py
         new file:   templates/inventory/category_list.html
+
+
+#### 4.6 Mengisi form pada laman category_list dan membuat logik
+
+        modified:   config_pos/settings.py
+        modified:   templates/inventory/category_list.html
+        modified:   templates/partials/head.html

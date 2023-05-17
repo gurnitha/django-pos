@@ -1,1 +1,77 @@
-CATEGORY_LIST
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="card shadow mb-4">
+        {# Card header - Dropdown #}
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Category List</h6>
+            <div class="dropdown no-arrow">
+                <a class="dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Actions</div>
+                    <a class="dropdown-item" href="">Action</a>
+                    <a class="dropdown-item" href="">Another Action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="">Something else here</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-body">
+            {% if not obj %}
+                <div class="alert alert-info">No category found</div>
+            {% else %}
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Description</th>
+                            <th>State</th>
+                            <th>Date Created</th>
+                            <th>Date Modified</th>
+                            <th class="all">Actions</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Description</th>
+                            <th>State</th>
+                            <th>Date Created</th>
+                            <th>Date Modified</th>
+                            <th class="all">Actions</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        {% for item in obj %}
+                        <tr>
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.description }}</td>
+                            <td>{{ item.state }}</td>
+                            <td>{{ item.date_created|date:"d/m/Y H:i:s" }}</td>
+                            <td>{{ item.date_modified }}</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-circle" role='button'>
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a href="" class="btn btn-warning btn-circle" role='button'>
+                                    <i class="far fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock content %}
