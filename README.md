@@ -217,3 +217,10 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   config_pos/settings.py
         modified:   templates/inventory/category_list.html
         modified:   templates/partials/head.html
+
+
+#### 4.7 Add links
+
+        modified:   app/inventory/views.py
+        modified:   templates/partials/sidebar.html
+        modified:   templates/users/login.html

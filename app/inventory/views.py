@@ -10,7 +10,7 @@ from app.inventory.models import Category
 
 # Create your views here.
 
-class CategoryView(LoginRequiredMixin,ListView):
+class CategoryView(LoginRequiredMixin, ListView):
 	model = Category
 	template_name = 'inventory/category_list.html'
 	context_object_name = 'obj'
