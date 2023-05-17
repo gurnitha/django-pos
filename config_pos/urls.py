@@ -21,8 +21,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # users app
-    path('', include('app.users.urls')),
+    path('', include(('app.users.urls','users'), namespace='users')),
 
     # base app
-    path('', include('app.base.urls')),
+    path('', include(('app.base.urls','base'), namespace='base')),
+
+    # inventory app
+    path('inventory/', include(('app.inventory.urls','inventory'), namespace='inventory')),
 ] 
