@@ -19,7 +19,7 @@ class Category(AbstractModel):
 	def __str__(self):
 		return '{}'.format(self.description)
 
-	def save():
+	def save(self):
 		self.description = self.description.upper()
 		super(Category, self).save()
 
