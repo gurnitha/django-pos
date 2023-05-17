@@ -188,3 +188,9 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   README.md
         modified:   app/inventory/apps.py
         modified:   config_pos/settings.py
+
+
+#### 4.3 Membuat AbstractModel
+
+        modified:   README.md
+        modified:   app/base/models.py
