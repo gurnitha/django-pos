@@ -224,3 +224,9 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   app/inventory/views.py
         modified:   templates/partials/sidebar.html
         modified:   templates/users/login.html
+
+
+#### 4.8 Membuat CategoryForm model
+
+        modified:   README.md
+        new file:   app/inventory/forms.py
