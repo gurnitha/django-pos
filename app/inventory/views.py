@@ -2,7 +2,7 @@
 
 # Import django/third parties modules
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView 
+from django.views.generic import ListView, CreateView, UpdateView 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy 
 
@@ -29,4 +29,17 @@ class CategoryNew(LoginRequiredMixin,CreateView):
 
 	def form_valid(self, form):
 		form.instance.user_creation = self.request.user 
+		return super().form_valid(form)
+
+
+class CategoryEdit(LoginRequiredMixin,UpdateView):
+	model=Category
+	template_name="inventory/category_form.html"
+	context_object_name="obj"
+	form_class=CategoryForm
+	success_url=reverse_lazy("inventory:category_list")
+	login_url="users:login"
+
+	def form_valid(self, form):
+		form.instance.user_modification = self.request.user.id 
 		return super().form_valid(form)

@@ -261,3 +261,12 @@ Membuat POS sistem menggunakan Django v2.2
         NOTE:
 
         Sekarang default checkbox menjadi 'checked'
+
+
+#### 4.13 UPDATE a category
+
+        modified:   app/inventory/urls.py
+        modified:   app/inventory/views.py
+        modified:   templates/inventory/category_form.html
+        new file:   templates/inventory/category_form_ori_good.html
+        modified:   templates/inventory/category_list.html
