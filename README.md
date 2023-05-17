@@ -194,3 +194,12 @@ Membuat POS sistem menggunakan Django v2.2
 
         modified:   README.md
         modified:   app/base/models.py
+
+
+#### 4.4 Membuat Category model, menjalankan migrasi dan membuat CategoryView
+
+        modified:   README.md
+        modified:   app/inventory/admin.py
+        new file:   app/inventory/migrations/0001_initial.py
+        modified:   app/inventory/models.py
+        modified:   app/inventory/views.py
