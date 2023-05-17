@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # new
     'app.users.apps.UsersConfig',
     'app.base.apps.BaseConfig',
+    'app.inventory.apps.InventoryConfig',
 
 ]
 
