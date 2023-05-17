@@ -4,7 +4,7 @@
 from django import forms 
 
 # Import from locals
-fromm app.inventory.models import Category
+from app.inventory.models import Category
 
 # Create your form here
 

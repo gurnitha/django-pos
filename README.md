@@ -236,3 +236,10 @@ Membuat POS sistem menggunakan Django v2.2
  
         modified:   README.md
         new file:   templates/inventory/category_form.html
+
+
+#### 4.10 Membuat CategoryNew method
+ 
+        modified:   README.md
+        modified:   app/inventory/forms.py
+        modified:   app/inventory/views.py
