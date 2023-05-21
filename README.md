@@ -281,3 +281,9 @@ Membuat POS sistem menggunakan Django v2.2
         NOTE:
 
         Semua berfungsi :)
+
+
+#### 4.15 DELETE  - membuat CategoryDelete view
+
+        modified:   README.md
+        modified:   app/inventory/views.py

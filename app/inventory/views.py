@@ -2,7 +2,7 @@
 
 # Import django/third parties modules
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView, UpdateView 
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy 
 
@@ -43,3 +43,10 @@ class CategoryEdit(LoginRequiredMixin,UpdateView):
 	def form_valid(self, form):
 		form.instance.user_modification = self.request.user.id 
 		return super().form_valid(form)
+
+
+class CategoryDelete(LoginRequiredMixin,DeleteView):
+	model=Category
+	template_name="inventory/category_delete.html"
+	context_object_name="obj"
+	success_url=reverse_lazy("inventory:category_list")
