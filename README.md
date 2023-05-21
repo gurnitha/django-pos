@@ -270,3 +270,14 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   templates/inventory/category_form.html
         new file:   templates/inventory/category_form_ori_good.html
         modified:   templates/inventory/category_list.html
+
+
+#### 4.14 ACTIVATE dataTable pada category_list page
+
+        modified:   README.md
+        modified:   templates/inventory/category_list.html
+        modified:   templates/partials/footer.html
+
+        NOTE:
+
+        Semua berfungsi :)
