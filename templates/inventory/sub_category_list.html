@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+
+                        <!-- Header begin -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Sub Category List</h6>
+                            <div class="dropdown no-arrow">
+                                <a class="dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                    <div class="dropdown-header">Actions</div>
+                                    <a class="dropdown-item" href="{% url 'inventory:category_new' %}">
+                                        <i class="far fa-calendar-plus"></i> 
+                                        New
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Header close -->
+
+                        <!-- Card-body begin -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                {% if not obj %}
+                                <div class="aler talert-info">No sub categories</div>
+                                {% else %}
+                                <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> -->
+                                <table class="table table-striped table-hover" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Id</th>
+                                            <th>Description</th>
+                                            <th>State</th>
+                                            <th>Date Created</th>
+                                            <th>Date Modified</th>
+                                            <th class="all">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Description</th>
+                                            <th>State</th>
+                                            <th>Date Created</th>
+                                            <th>Date Modified</th>
+                                            <th class="all">Actions</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for item in obj %}
+                                        <tr>
+                                            <td>{{ item.category }}</td>
+                                            <td>{{ item.id }}</td>
+                                            <td>{{ item.description }}</td>
+                                            <td>{{ item.state|yesno:"Active,Inactive" }}</td>
+                                            <td>{{ item.date_created|date:"d/m/Y H:i:s" }}</td>
+                                            <td>{{ item.date_modified|date:"d/m/Y H:i:s" }}</td>
+                                            <td>
+                                                <a href="{% url 'inventory:category_edit' item.id %}" class="btn btn-warning btn-circle" role='button'>
+                                                    <i class="far fa-edit"></i>
+                                                </a>
+                                                <a href="{% url 'inventory:category_delete' item.id %}" class="btn btn-warning btn-circle" role='button'>
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Card-body close -->
+
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+{% endblock content %}
+
+{% block js_page %}
+<script>
+    // {# Call the dataTables jQuery plugin #}
+    $(ducument).ready(function(){
+        $('.table').DataTable();
+    });
+</script>
+{% endblock js_page %}
