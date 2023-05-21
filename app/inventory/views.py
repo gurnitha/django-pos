@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy 
 
 # Import from locals
-from app.inventory.models import Category
+from app.inventory.models import Category, SubCategory 
 from app.inventory.forms import CategoryForm
 
 # Create your views here.
@@ -50,3 +50,10 @@ class CategoryDelete(LoginRequiredMixin,DeleteView):
 	template_name="inventory/category_delete.html"
 	context_object_name="obj"
 	success_url=reverse_lazy("inventory:category_list")
+
+
+class SubCategoryView(LoginRequiredMixin,ListView):
+	model = SubCategory
+	template_name = 'inventory/sub_category_list.html'
+	context_object_name = 'obj'
+	login_url = 'users:login' 
