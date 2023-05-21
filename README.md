@@ -171,7 +171,7 @@ Membuat POS sistem menggunakan Django v2.2
 ## 4. KATALOG
 
 
-#### 4.1 Membuat app dengan nama 'app\inventory'
+#### 4.1 CREATE NEW APP - Membuat app dengan nama 'app\inventory'
 
         modified:   README.md
         new file:   app/inventory/__init__.py
@@ -183,20 +183,20 @@ Membuat POS sistem menggunakan Django v2.2
         new file:   app/inventory/views.py
 
 
-#### 4.2 Register inventory app
+#### 4.2 REGISTER - Register inventory app
 
         modified:   README.md
         modified:   app/inventory/apps.py
         modified:   config_pos/settings.py
 
 
-#### 4.3 Membuat AbstractModel
+#### 4.3 MODEL - Membuat AbstractModel
 
         modified:   README.md
         modified:   app/base/models.py
 
 
-#### 4.4 Membuat Category model, menjalankan migrasi dan membuat CategoryView
+#### 4.4 MODEL - Membuat Category model, menjalankan migrasi dan membuat CategoryView
 
         modified:   README.md
         modified:   app/inventory/admin.py
@@ -205,47 +205,47 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   app/inventory/views.py
 
 
-#### 4.5 Membuat laman category_list urls, view, template
+#### 4.5 CATEGORY CREATE - Membuat laman category_list urls, view, template
 
         new file:   app/inventory/urls.py
         modified:   config_pos/urls.py
         new file:   templates/inventory/category_list.html
 
 
-#### 4.6 Mengisi form pada laman category_list dan membuat logik
+#### 4.6 CATEGORY CREATE -  Mengisi form pada laman category_list dan membuat logik
 
         modified:   config_pos/settings.py
         modified:   templates/inventory/category_list.html
         modified:   templates/partials/head.html
 
 
-#### 4.7 Add links
+#### 4.7 CATEGORY CREATE -  Add links
 
         modified:   app/inventory/views.py
         modified:   templates/partials/sidebar.html
         modified:   templates/users/login.html
 
 
-#### 4.8 Membuat CategoryForm model
+#### 4.8 CATEGORY CREATE -  Membuat CategoryForm model
 
         modified:   README.md
         new file:   app/inventory/forms.py
 
 
-#### 4.9 Membuat laman category_form
+#### 4.9 CATEGORY CREATE -  Membuat laman category_form
  
         modified:   README.md
         new file:   templates/inventory/category_form.html
 
 
-#### 4.10 Membuat CategoryNew method
+#### 4.10 CATEGORY CREATE -  Membuat CategoryNew method
  
         modified:   README.md
         modified:   app/inventory/forms.py
         modified:   app/inventory/views.py
 
 
-#### 4.11 Membuat urls untuk Create New Category dan fixing some issues
+#### 4.11 CATEGORY CREATE -  Membuat urls untuk Create New Category dan fixing some issues
 
         modified:   app/inventory/models.py
         modified:   app/inventory/urls.py
@@ -253,7 +253,7 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   templates/inventory/category_list.html
 
 
-#### 4.12 Menambahkan attributes 'checked' pada laman category_form
+#### 4.12 CATEGORY CREATE -  Menambahkan attributes 'checked' pada laman category_form
 
         modified:   README.md
         modified:   templates/inventory/category_form.html
@@ -263,7 +263,7 @@ Membuat POS sistem menggunakan Django v2.2
         Sekarang default checkbox menjadi 'checked'
 
 
-#### 4.13 UPDATE a category
+#### 4.13 CATEGORY UPDATE - Update a category
 
         modified:   app/inventory/urls.py
         modified:   app/inventory/views.py
@@ -272,7 +272,7 @@ Membuat POS sistem menggunakan Django v2.2
         modified:   templates/inventory/category_list.html
 
 
-#### 4.14 ACTIVATE dataTable pada category_list page
+#### 4.14 CATEGORY UPDATE -  Activate dataTable pada category_list page
 
         modified:   README.md
         modified:   templates/inventory/category_list.html
@@ -283,20 +283,23 @@ Membuat POS sistem menggunakan Django v2.2
         Semua berfungsi :)
 
 
-#### 4.15 DELETE  - membuat CategoryDelete view
+#### 4.15 CATEGORY DELETE  - membuat CategoryDelete view
 
         modified:   README.md
         modified:   app/inventory/views.py
 
 
-#### 4.16 DELETE  - membuat delete template
+#### 4.16 CATEGORY DELETE  - membuat delete template
 
         modified:   README.md
         new file:   templates/inventory/category_delete.html
 
 
-#### 4.17 DELETE  - membuat route delete category
+#### 4.17 CATEGORY DELETE  - membuat route delete category
 
         modified:   README.md
         modified:   app/inventory/urls.py
         modified:   templates/inventory/category_list.html
+
+
+#### 4.18 README.md - modified
