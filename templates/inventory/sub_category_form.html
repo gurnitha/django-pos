@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form method="POST" class="form-inline">
+    {% csrf_token%}
+    <div class="col-xl-6 col-md-6 mb-6">
+        {# Update category #}
+        {% if obj %}
+        <div class="card border-left-warning shadow h-100 py-2">
+        {% else %}
+        <div class="card border-left-primary shadow h-100 py-2">
+        {% endif %}
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            {% if obj %} Edit {% else %} New {% endif %} Sub Category
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="input-group">
+                                    {# <input 
+                                        type="text" 
+                                        name="description"
+                                        maxlength="100"
+                                        class="form-control"
+                                        required
+                                        id="id_description"
+                                        placeholder="Description"
+                                        value="{% if obj %} {{ obj.description }} {% endif %}"> #}
+                                        {{ form.category }}
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="input-group">
+                                    {# <input 
+                                        type="text" 
+                                        name="description"
+                                        maxlength="100"
+                                        class="form-control"
+                                        required
+                                        id="id_description"
+                                        placeholder="Description"
+                                        value="{% if obj %} {{ obj.description }} {% endif %}"> #}
+
+                                        {{ form.description }}
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group">
+                                    {# <label for="id_state" style="margin-right:5px;">State</label>
+                                    <input type="checkbox" name="state"  class="form-control" id="is_state" 
+                                       {% if obj.state %} checked {% endif %} > #}
+
+                                       {{ form.state }}
+                                </div>
+                                
+                            </div>
+                            <!-- {{ form.as_p}} -->
+                        </div><br>
+                        
+                        <div class="dropdown-divider"></div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-danger"><span class="fa fa-save"></span>Save</button>
+                                <a href="{% url 'inventory:sub_category_list' %}" class="btn btn-success"><span class="fa fa-undo"></span>Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
