@@ -287,3 +287,9 @@ Membuat POS sistem menggunakan Django v2.2
 
         modified:   README.md
         modified:   app/inventory/views.py
+
+
+#### 4.16 DELETE  - membuat delete template
+
+        modified:   README.md
+        new file:   templates/inventory/category_delete.html
