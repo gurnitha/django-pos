@@ -309,3 +309,59 @@ Membuat POS sistem menggunakan Django v2.2
 
         modified:   README.md
         modified:   app/inventory/models.py
+
+
+#### 4.20 SUB CATEGORY - Run makemigrations and migrate
+
+        1. Jalankan migrasi
+
+        (venv3922) hp@ING:~ python manage.py makemigrations
+        Migrations for 'inventory':
+          app\inventory\migrations\0002_subcategory.py
+            - Create model SubCategory
+
+        (venv3922) hp@ING:~ python manage.py migrate
+        Operations to perform:
+          Apply all migrations: admin, auth, contenttypes, inventory, sessions
+        Running migrations:
+          Applying inventory.0002_subcategory... OK
+
+        2. Memeriksa hasil migrasi
+
+        (venv3922) hp@ING:~ python manage.py dbshell
+        psql (13.0, server 15.1)
+        WARNING: psql major version 13, server major version 15.
+                 Some psql features might not work.
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        django_pos=# \dt
+                           List of relations
+         Schema |            Name            | Type  |  Owner
+        --------+----------------------------+-------+----------
+         public | auth_group                 | table | postgres
+         public | auth_group_permissions     | table | postgres
+         public | auth_permission            | table | postgres
+         public | auth_user                  | table | postgres
+         public | auth_user_groups           | table | postgres
+         public | auth_user_user_permissions | table | postgres
+         public | django_admin_log           | table | postgres
+         public | django_content_type        | table | postgres
+         public | django_migrations          | table | postgres
+         public | django_session             | table | postgres
+         public | inventory_category         | table | postgres
+         public | inventory_subcategory      | table | postgres
+        (12 rows)
+
+
+        django_pos=# SELECT * FROM inventory_subcategory;
+         id | state | date_created | date_modified | user_modification | description | category_id | user_creation_id
+        ----+-------+--------------+---------------+-------------------+-------------+-------------+------------------
+        (0 rows)
+
+        django_pos=#
+
+        modified:   README.md
+        new file:   app/inventory/migrations/0002_subcategory.py
