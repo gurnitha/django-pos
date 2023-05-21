@@ -3,7 +3,10 @@
 # Import from django/third parties modules
 from django.urls import path
 
-from app.inventory.views import CategoryView, CategoryNew, CategoryEdit, CategoryDelete 
+from app.inventory.views import (
+    CategoryView, CategoryNew, 
+    CategoryEdit, CategoryDelete,
+    SubCategoryView) 
 
 app_name = 'inventory'
 
@@ -12,4 +15,7 @@ urlpatterns = [
     path('categories/new',CategoryNew.as_view(),name="category_new"),
     path('categories/edit/<int:pk>',CategoryEdit.as_view(),name="category_edit"),
     path('categories/delete/<int:pk>',CategoryDelete.as_view(),name="category_delete"),
+
+    path('subcategories',SubCategoryView.as_view(),name="sub_category_list"),
+
 ]

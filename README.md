@@ -377,3 +377,11 @@ Membuat POS sistem menggunakan Django v2.2
 
         modified:   README.md
         modified:   app/inventory/views.py
+
+
+#### 4.23 SUB CATEGORY - Create route for subcategories
+
+        modified:   README.md
+        modified:   app/inventory/urls.py
+        modified:   templates/inventory/sub_category_list.html
+        modified:   templates/partials/sidebar.html
