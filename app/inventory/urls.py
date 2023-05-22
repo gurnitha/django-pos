@@ -6,7 +6,7 @@ from django.urls import path
 from app.inventory.views import (
     CategoryView, CategoryNew, 
     CategoryEdit, CategoryDelete,
-    SubCategoryView) 
+    SubCategoryView, SubCategoryNew) 
 
 app_name = 'inventory'
 
@@ -17,5 +17,6 @@ urlpatterns = [
     path('categories/delete/<int:pk>',CategoryDelete.as_view(),name="category_delete"),
 
     path('subcategories',SubCategoryView.as_view(),name="sub_category_list"),
+    path('subcategories/new',SubCategoryNew.as_view(),name="sub_category_new"),
 
 ]

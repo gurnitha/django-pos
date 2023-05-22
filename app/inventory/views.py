@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 
 # Import from locals
 from app.inventory.models import Category, SubCategory 
-from app.inventory.forms import CategoryForm
+from app.inventory.forms import CategoryForm, SubCategoryForm
 
 # Create your views here.
 
@@ -57,3 +57,16 @@ class SubCategoryView(LoginRequiredMixin,ListView):
 	template_name = 'inventory/sub_category_list.html'
 	context_object_name = 'obj'
 	login_url = 'users:login' 
+
+
+class SubCategoryNew(LoginRequiredMixin,CreateView):
+	model=SubCategory
+	template_name="inventory/sub_category_form.html"
+	context_object_name="obj"
+	form_class=SubCategoryForm
+	success_url=reverse_lazy("inventory:sub_category_list")
+	login_url="users:login"
+
+	def form_valid(self, form):
+		form.instance.user_creation = self.request.user 
+		return super().form_valid(form)

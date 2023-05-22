@@ -397,3 +397,12 @@ Membuat POS sistem menggunakan Django v2.2
 
         modified:   README.md
         new file:   templates/inventory/sub_category_form.html
+
+
+#### 4.26 SUB CATEGORY - Create sub category
+
+        modified:   app/inventory/forms.py
+        modified:   app/inventory/urls.py
+        modified:   app/inventory/views.py
+        modified:   templates/inventory/sub_category_form.html
+        modified:   templates/inventory/sub_category_list.html

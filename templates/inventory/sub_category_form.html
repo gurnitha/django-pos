@@ -4,7 +4,7 @@
 
 <form method="POST" class="form-inline">
     {% csrf_token%}
-    <div class="col-xl-6 col-md-6 mb-6">
+    <div class="col-xl-12 col-md-12 mb-12">
         {# Update category #}
         {% if obj %}
         <div class="card border-left-warning shadow h-100 py-2">
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-5">
                                 <div class="input-group">
-                                    {# <input 
+                                    <!--  <input 
                                         type="text" 
                                         name="description"
                                         maxlength="100"
@@ -29,13 +29,13 @@
                                         required
                                         id="id_description"
                                         placeholder="Description"
-                                        value="{% if obj %} {{ obj.description }} {% endif %}"> #}
+                                        value="{% if obj %} {{ obj.description }} {% endif %}">  -->
                                         {{ form.category }}
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="input-group">
-                                    {# <input 
+                                    <!-- <input 
                                         type="text" 
                                         name="description"
                                         maxlength="100"
@@ -43,16 +43,16 @@
                                         required
                                         id="id_description"
                                         placeholder="Description"
-                                        value="{% if obj %} {{ obj.description }} {% endif %}"> #}
+                                        value="{% if obj %} {{ obj.description }} {% endif %}">  -->
 
                                         {{ form.description }}
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="form-group">
-                                    {# <label for="id_state" style="margin-right:5px;">State</label>
+                                    <!-- <label for="id_state" style="margin-right:5px;">State</label>
                                     <input type="checkbox" name="state"  class="form-control" id="is_state" 
-                                       {% if obj.state %} checked {% endif %} > #}
+                                       {% if obj.state %} checked {% endif %} >  -->
 
                                        {{ form.state }}
                                 </div>
